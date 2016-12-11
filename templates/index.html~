@@ -1,14 +1,18 @@
 <html>
 <head>
-    <title>ARKEP</title>
+  <title>ARKEP</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"
 </head>
 <body>
-    <div class="">
-    <form vlass="" nethod="POST">
-	<input type="text" name= "field1"/>
-	<input type="text" name="field2"/>
-	<input tybe="submit" value="Register"/>
-	</form>
-       </div>
-      </body>
-    </html>
+  <div id="header">
+    <h2>ARKEP</h2>
+  </div>
+  <div class="container">
+    <form method="POST">
+      <input type="text" name="field1" placeholder="Field 1"/>
+      <input type="text" name="field2" placeholder="Field 2"/>
+      <input type="submit" value="Register"/>
+    </form>
+  </div>
+</body>
+</html
