@@ -1,0 +1,15 @@
+Exception on /style.css [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/Desktop/Techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Desktop/Techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Desktop/Techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/Desktop/Techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Desktop/Techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/Desktop/Techstitution/app/mod_main/views.py", line 24, in get_doc
+    #doc_json = json_util.dumps(doc)
+NameError: global name 'Objectid' is not defined

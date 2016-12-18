@@ -1,0 +1,18 @@
+<table style="width:100%">
+<tr>
+  <th>Company Name</th>
+  <th>Address</th>
+ 
+</tr>
+  {% for item in dokumentat %}
+ 
+  <tr>
+  <td>{{ item['vetemshkronja']}}</td>
+  <td>{{ item['vetemnumra']}}</td>
+    <a href = {{ url_for('main.get_doc',id=item._id)
+    }}"
+</tr>
+  {% endfor %}
+
+</table>
+
