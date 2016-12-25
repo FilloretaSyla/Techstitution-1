@@ -1,18 +1,42 @@
-<table style="width:100%">
-<tr>
-  <th>Company Name</th>
-  <th>Address</th>
- 
-</tr>
-  {% for item in dokumentat %}
- 
-  <tr>
-  <td>{{ item['vetemshkronja']}}</td>
-  <td>{{ item['vetemnumra']}}</td>
-    <a href = {{ url_for('main.get_doc',id=item._id)
-    }}"
-</tr>
-  {% endfor %}
-
 </table>
-
+{% extends 'layout.html' %}
+{% block header %}
+  <h4 class="center-align" style="margin-bottom:30px">Ndermarresit</h4>
+{% endblock %}
+{% block content%}
+<div class="card-panel">
+  <table class="highlight bordered responsive-table">
+  <thead>
+    <tr>
+      <th>Emri i Ndermarresit</th>
+      <th>Adresa</th>
+      <th>Numri i Telefonit</th>
+      <th>Email Adresa</th>
+      <th>Opsionet</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for record in myCursor %}
+  <tr class="item-row">
+    <td>
+      {{ record['vetemshkronja'] }}
+    </td>
+    <td>
+      {{ record['vetemshkronja'] }}
+    </td>
+    <td>
+      {{ record['vetemnumra'] }}
+    </td>
+    <td>
+      {{ record['vetemshkronja'] }}
+    </td>
+    <td>
+      <a href="{{ url_for('main.get_doc', id=item._id) }}">Views</a>
+      <a href="{{url_for('main.remove_doc',id=item._id)}}">Delete</a>
+    </td>
+  </tr>
+  {%endfor%}
+  </tbody>
+  </table>
+</div>
+{% endblock %}
