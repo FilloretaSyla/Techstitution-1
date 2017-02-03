@@ -7,7 +7,7 @@ mod_main = Blueprint('main', __name__)
 @mod_main.route('/', methods=['GET'])
 def index():
     if request.method == ['GET']:
-	return render_template('indexii.html')
+	return render_template('indexi.html')
     elif request.method == ['POST']:
  	data = request.form.to_dict()
         return json_util.dumps(data)
