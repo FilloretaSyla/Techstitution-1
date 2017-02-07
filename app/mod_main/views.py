@@ -11,7 +11,7 @@ mod_main = Blueprint('main', __name__)
 def index():
     db = mongo.db.arkep
     if request.method == 'GET':
-        return render_template('index.html')
+        return render_template('indexi.html')
 
 @mod_main.route('/upload')
 def upload_files():
