@@ -26,7 +26,7 @@ def get_doc(id):
 	return render_template('doc.html', doc=doc)
     else:
 	    return 'bad request'
-@mod_main.route('/<string:id'>,methods=['GET'] )
+@mod_main.route('/<string:id'>, methods=['GET'] )
 def remove_doc(id):
     db = mongo.db.arkep
     if request.method== 'GET':
@@ -35,7 +35,7 @@ def remove_doc(id):
     else:
 	return "bad request" 	
 
-@mod_main.route('/lista',methods=['GET'])
+@mod_main.route('/lista', methods=['GET'])
 def lista():
     dokumentat = mongo.db.arkep.find()
     return render_template('lista.html',dokumentat=dokumentat)	
