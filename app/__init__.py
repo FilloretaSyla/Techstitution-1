@@ -5,9 +5,12 @@ from logging.handlers import RotatingFileHandler
 from flask.ext.pymongo import PyMongo
 from flask.ext.cors import CORS
 from app.utils.mongo_utils import MongoUtils
+from os.path import join, dirname, realpath
 
 # Create MongoDB database object.
 mongo = PyMongo()
+
+upload_folder = join(dirname(realpath(__file__)),'static/upload/')
 
 #Initialize mongo access point
 mongo_utils = MongoUtils(mongo)
